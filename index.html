@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Baudų skaičiuotuvas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <p class="title-sk">Global Gaming Skaičiuotuvas</p>
+
+  <div class="grid-video">
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-merchant-account-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Bankas</p>
+      </div>
+      <div class="suma">
+        <select class="banko-ivestis">
+          <option value="" style="display: none;">Pasirink</option>
+          <option value="lengvas">Lengvas</option>
+          <option value="vidutinis">Vidutinis</option>
+          <option value="sunkus">Sunkus</option>
+        </select>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-headlight-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Šviesos</p>
+      </div>
+      <div class="suma">
+        <p>€400</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-document-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Draudimas</p>
+      </div>
+      <div class="suma">
+        <p>€800</p>
+      </div>
+      <div class="mygtukas">
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-engine-oil-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Technikinė</p>
+      </div>
+      <div class="suma">
+        <p>€1500</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-licence-plate-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Numeriai</p>
+      </div>
+      <div class="suma">
+        <p>€1000</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-road-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Wrong</p>
+      </div>
+      <div class="suma">
+        <p>€800</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-automatic-car-wash-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Chuliganiškas</p>
+      </div>
+      <div class="suma">
+        <p>€1500</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-crossroad-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p>Neteisingas<br>važiavimas<br>per sankryžą</p>
+      </div>
+      <div class="suma">
+        <p>€200</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-slippery-road-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Nesaugus<br>vairavimas </p>
+      </div>
+      <div class="suma">
+        <p>€250</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-car-racing-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Nelegalios<br>lenktynės </p>
+      </div>
+      <div class="suma">
+        <p>€1500</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-sidewalk-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;" title="žole/smėliu">Važiavimas<br>šaligatviu
+      </div>
+      <div class="suma">
+        <p>€500</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-police-car-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 10px;">Trukdymas<br>policininkų<br>darbui </p>
+      </div>
+      <div class="suma">
+        <p>€2000</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-car-crash-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Pareigūnų<br>taranavimas</p>
+      </div>
+      <div class="suma">
+        <p>€2700</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-shouting-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p>Įkyrus<br>prašymas<br>dirbti<br>mokiniu</p>
+      </div>
+      <div class="suma">
+        <p>€800</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-police-fine-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p>Prašymas<br>įspėti ar<br>sumažinti<br>baudą</p>
+      </div>
+      <div class="suma">
+        <p>€250</p>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="icon">
+      <img src="icons/icons8-speedometer-100.png" alt="">
+      </div>
+      <div class="pav">
+        <p style="padding-top: 15px;">Greičio<br>viršijimas</p>
+      </div>
+      <div class="suma greicio-ivestis">
+        <select class="banko-ivestis">
+          <option value="" style="display: none;">Pasirink</option>
+          <option value="10-20" title="€100">10-20</option>
+          <option value="20-30" title="€250">20-30</option>
+          <option value="30-40" title="€350">30-40</option>
+          <option value="40+" title="€600">40+</option>
+        </select>
+      </div>
+      <div>
+        <button class="prideti">Pridėti</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="licencijos"><input class="licencijos-input" placeholder="Lic"></div>
+    <div class="result">
+      4800
+    </div>
+    <div class="C">
+      <select name="C" class="C-input">
+        <option value="" style="display: none;">C</option>
+        <option value="c0">C0</option>
+        <option value="c1" title="€400">C1</option>
+        <option value="c2" title="€800">C2</option>
+        <option value="c3" title="€1200">C3</option>
+        <option value="c4" title="€1800">C4</option>
+    </select>
+    </div>
+    <div class="multi"><button class="multiple">2X</button></div>
+    
+  </div>
+ <script href="scripts/calculation.js"></script>
+</body>
+</html>
