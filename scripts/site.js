@@ -70,13 +70,12 @@ function BaudosGreitis() {
 };
 BaudosGreitis();
 
-console.log(baudosHTML);
-
 document.querySelector('.js-grid-video').innerHTML = baudosHTML;
 
 document.querySelectorAll('.js-prideti').forEach((button) => {
   button.addEventListener('click', () => {
     const baudosId = button.dataset.baudosId;
+    const baudosKaina = button.dataset.baudosKaina;
 
     let matchingItem;
 
@@ -88,12 +87,22 @@ document.querySelectorAll('.js-prideti').forEach((button) => {
 
     if (matchingItem) {
       matchingItem.quantity += 1;
+      matchingItem.baudosKaina += Number(baudosKaina);
     } else {
       cart.push({
         baudosId: baudosId,
+        baudosKaina: Number(baudosKaina),
         quantity: 1
       });
     }
+
+    let galutineKaina = 0;
+
+    cart.forEach((item) => {
+      galutineKaina += item.baudosKaina;
+    });
+
     console.log(cart);
+    document.querySelector('.js-result').innerHTML = galutineKaina
   });
 });
