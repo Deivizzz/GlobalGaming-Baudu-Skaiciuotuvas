@@ -18,7 +18,7 @@ function baudosBankas () {
       </select>
     </div>
     <div>
-      <button class="prideti">Pridėti</button>
+      <button class="prideti js-prideti" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
     </div>
   </div>
   `;
@@ -38,7 +38,7 @@ baudos.forEach((baudos) => {
         <p>€${baudos.price}</p>
       </div>
       <div>
-        <button class="prideti">Pridėti</button>
+        <button class="prideti js-prideti" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
       </div>
     </div>
   `;
@@ -63,14 +63,37 @@ function BaudosGreitis() {
         </select>
       </div>
       <div>
-        <button class="prideti">Pridėti</button>
+        <button class="prideti js-prideti" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
       </div>
     </div>
   `;
 };
 BaudosGreitis();
 
-
 console.log(baudosHTML);
 
 document.querySelector('.js-grid-video').innerHTML = baudosHTML;
+
+document.querySelectorAll('.js-prideti').forEach((button) => {
+  button.addEventListener('click', () => {
+    const baudosId = button.dataset.baudosId;
+
+    let matchingItem;
+
+    cart.forEach((item) => {
+      if(baudosId === item.baudosId) {
+        matchingItem = item;
+      }
+    });
+
+    if (matchingItem) {
+      matchingItem.quantity += 1;
+    } else {
+      cart.push({
+        baudosId: baudosId,
+        quantity: 1
+      });
+    }
+    console.log(cart);
+  });
+});
