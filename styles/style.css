@@ -2,7 +2,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: Roboto, Arial;
-  background: linear-gradient(to right, #000000, #FFA500);
+  background: linear-gradient(to right, #001aff, #FFA500);
 }
 
 p {
@@ -186,4 +186,20 @@ p {
   height: 61px;
   justify-content: center;
   flex: 1;
+}
+
+.cart-box {
+  display: flex;
+  margin-top: 250px;
+  margin-left: 200px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: 250px;
+  background-color: white;
+}
+
+.cart {
+  font-size: 50px;
+  color: yellowgreen;
+
 }

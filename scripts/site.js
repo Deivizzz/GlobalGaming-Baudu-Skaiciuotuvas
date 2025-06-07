@@ -18,7 +18,7 @@ function baudosBankas () {
       </select>
     </div>
     <div>
-      <button class="prideti js-prideti" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
+      <button class="prideti js-prideti" data-baudos-name="${baudos.name}" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
     </div>
   </div>
   `;
@@ -38,7 +38,7 @@ baudos.forEach((baudos) => {
         <p>€${baudos.price}</p>
       </div>
       <div>
-        <button class="prideti js-prideti" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
+        <button class="prideti js-prideti" data-baudos-name="${baudos.name}" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
       </div>
     </div>
   `;
@@ -63,7 +63,7 @@ function BaudosGreitis() {
         </select>
       </div>
       <div>
-        <button class="prideti js-prideti" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
+        <button class="prideti js-prideti" data-baudos-name="${baudos.name}" data-baudos-kaina="${baudos.price}" data-baudos-id="${baudos.id}">Pridėti</button>
       </div>
     </div>
   `;
@@ -76,11 +76,12 @@ document.querySelectorAll('.js-prideti').forEach((button) => {
   button.addEventListener('click', () => {
     const baudosId = button.dataset.baudosId;
     const baudosKaina = button.dataset.baudosKaina;
+    const baudosName = button.dataset.baudosName.replace(/<br\s*\/?>/gi, ' ');
 
     let matchingItem;
 
     cart.forEach((item) => {
-      if(baudosId === item.baudosId) {
+      if(baudosId === item.baudosId, baudosName === item.baudosName) {
         matchingItem = item;
       }
     });
@@ -91,6 +92,7 @@ document.querySelectorAll('.js-prideti').forEach((button) => {
     } else {
       cart.push({
         baudosId: baudosId,
+        baudosName: baudosName,
         baudosKaina: Number(baudosKaina),
         quantity: 1
       });
@@ -102,7 +104,9 @@ document.querySelectorAll('.js-prideti').forEach((button) => {
       galutineKaina += item.baudosKaina;
     });
 
+    document.querySelector('.js-result').innerHTML = galutineKaina;
+
+    renderCart();
     console.log(cart);
-    document.querySelector('.js-result').innerHTML = galutineKaina
   });
 });
